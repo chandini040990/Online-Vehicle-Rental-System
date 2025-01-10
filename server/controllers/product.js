@@ -414,6 +414,7 @@ export const bookingStatus = async (req, res) => {
     ).populate("buyer", "email name");
     // send email
 
+   
     const mailOptions = {
       from: process.env.SMTP_USER,
       to: booking.buyer.email,
@@ -421,10 +422,12 @@ export const bookingStatus = async (req, res) => {
       html: `
         <h1>Hi ${booking.buyer.name},</h1></br>
         <h2>Your booking status is: <span style="color:red;">${booking.status}</span></h2>
-        <p>Visit <a href="${process.env.CLIENT_URL}/dashboard/user/bookings">your dashboard</a> for more details</p></br>
-        <p>Please leave your valuable feedback by clicking <a href="${process.env.CLIENT_URL}/dashboard/user/feedback">submit feedback</a></p>
+        <p>Visit the below for more details</p></br>
+        <a href="${process.env.CLIENT_URL}/dashboard/user/bookings">your dashboard</a> 
+        <p>Please leave your valuable feedback by clicking feedback link</p>
+        <a href="${process.env.CLIENT_URL}/dashboard/user/feedback">submit feedback</a>
         <p>Thank you,<p>
-        <h2>WHEELS4US</h2>
+        <h2>WHEELS 4 RENT</h2>
       `,
     }
 
