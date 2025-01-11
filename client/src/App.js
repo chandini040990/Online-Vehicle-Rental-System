@@ -30,7 +30,7 @@ import AdminBookings from "./pages/admin/Bookings";
 import AboutUs from "./components/nav/AboutUs";
 import ReviewForm from "./pages/ReviewForm";
 import Testimonials from "./pages/Testimonials";
-// import BookingForm from "./components/forms/BookingForm";
+
 
 const PageNotFound = () => {
   return (

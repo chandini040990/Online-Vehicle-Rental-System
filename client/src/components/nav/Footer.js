@@ -11,10 +11,10 @@ function Footer() {
                         <div className="col-6 col-md-2 mb-3">
                             <h5>Quick Links</h5>
                             <ul className="nav flex-column">
-                                <li className="nav-item mb-2"><a href="#home" className="nav-link p-0 text-body-secondary-orange">Home</a></li>
-                                <li className="nav-item mb-2"><a href="#cars" className="nav-link p-0  text-body-secondary-orange">Cars</a></li>
-                                <li className="nav-item mb-2"><a href="#contacts" className="nav-link p-0 text-body-secondary-orange">Contacts</a></li>
-                                <li className="nav-item mb-2"><a href="#aboutus" className="nav-link p-0 text-body-secondary-orange">About Us</a></li>
+                                <li className="nav-item mb-2"><a href="/" className="nav-link p-0 text-body-secondary-orange">Home</a></li>
+                                <li className="nav-item mb-2"><a href="cars" className="nav-link p-0  text-body-secondary-orange">Cars</a></li>
+                                {/* <li className="nav-item mb-2"><a href="/search" className="nav-link p-0 text-body-secondary-orange">Search</a></li>  */}
+                                {/* <li className="nav-item mb-2"><a href="aboutus" className="nav-link p-0 text-body-secondary-orange">About Us</a></li> */}
                             </ul>
                         </div>
 

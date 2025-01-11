@@ -26,7 +26,7 @@ export default function Testimonials() {
     return (
         <>
 
-            <div className="container-fluid border-top mx-auto text-center mb-4">
+            <div className="container-fluid border-top border-bottom mx-auto text-center mb-4">
                 <h2 className="text-4xl font-bold text-blue-900 mb-8">Testimonials</h2>
                 <p className="text-lg text-gray-700 font-normal mb-8">What our customers say about us</p>
                 <div className="container overflow-hidden">

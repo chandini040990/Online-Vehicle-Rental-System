@@ -1,70 +1,35 @@
-# Getting Started with Create React App
+Online Vehicle Rental System
+Develop a platform for renting vehicles with features for vehicle listings, booking management, and payment processing. Implement tools for tracking rental history, providing vehicle maintenance records, and offering user reviews to support vehicle rental operations.
+What to do?
+Vehicle Listings:
+Provide a user-friendly interface for listing vehicles available for rent. Include fields for vehicle details such as make, model, year, price per day, and availability.
+Implement search and filter options to help users find vehicles based on criteria such as vehicle type, location, and price range.
+Include high-quality images and detailed descriptions for each vehicle listing.
+Booking Management:
+Allow users to book vehicles for specific dates and times. Implement a calendar system to show vehicle availability and avoid double bookings.
+Provide options for users to modify or cancel their bookings if needed.
+Implement booking confirmation and reminder notifications via email or SMS.
+Payment Processing:
+Integrate a secure payment gateway (e.g., Stripe, Razorpay) to handle transactions for vehicle rentals.
+Provide users with a streamlined payment process and support multiple payment methods (e.g., credit/debit cards, digital wallets).
+Allow users to view their payment history and generate invoices for completed transactions.
+Rental History Tracking:
+Implement features for tracking the rental history of each vehicle, including past bookings, durations, and user details.
+Provide rental history reports to vehicle owners and administrators for better management and analysis.
+User Reviews:
+Allow users to leave reviews and ratings for vehicles they have rented. Include options for users to provide feedback on their rental experience.
+Implement a review moderation system to ensure that feedback is appropriate and helpful.
+Display user reviews and ratings on vehicle listings to help future renters make informed decisions.
+User Features:
+Implement secure user registration and login functionalities. Allow users to manage their profiles and settings.
+Provide a user dashboard to view and manage current and past bookings, payment history, and reviews.
+Offer features for searching and booking vehicles, viewing vehicle details, and tracking booking status.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Admin Features:
+Implement an admin dashboard for managing vehicle listings, user accounts, and bookings.
+Provide tools for approving or rejecting vehicle listings, monitoring payment transactions, and handling user support inquiries.
+Techstacks needs to be used:
+MERN stack
+TailwindCSS for styling
+Payment gateway integration (e.g., Stripe, Razorpay)

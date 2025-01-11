@@ -125,7 +125,7 @@ export default function UserCartSidebar() {
                 },
               }}
               onInstance={(instance) => setInstance(instance)}
-              // onPaymentMethodNonce={handleBuy}
+            // onPaymentMethodNonce={handleBuy}
             />
             <button
               onClick={handleBuy}

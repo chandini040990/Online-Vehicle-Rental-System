@@ -38,7 +38,7 @@ export default function ProductCard({ p }) {
             className="card-img-top"
             src={`${process.env.REACT_APP_API}/product/photo/${p._id}`}
             alt={p.name}
-            style={{ height: "100%", width: "100%", objectFit: "cover" }}
+            style={{ height: "30vh", width: "100%", objectFit: "cover" }}
           />
         </Badge.Ribbon >
       </Badge.Ribbon >

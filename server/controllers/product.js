@@ -363,8 +363,10 @@ export const processPayment = async (req, res) => {
           submitForSettlement: true,
         },
       },
+  
       function (error, result) {
         if (result) {
+          // console.log("result",result)
           const booking = new Booking({
             products: cart,
             productData: cart,
@@ -414,7 +416,7 @@ export const bookingStatus = async (req, res) => {
     ).populate("buyer", "email name");
     // send email
 
-   
+
     const mailOptions = {
       from: process.env.SMTP_USER,
       to: booking.buyer.email,

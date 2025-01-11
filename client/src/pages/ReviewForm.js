@@ -1,12 +1,8 @@
 // ReviewForm.js
 
 import React, { useState } from 'react';
-import moment from "moment";
 import axios from "axios";
-import { useParams } from "react-router-dom";
-import ProductCard from "../components/cards/ProductCard";
 import toast from "react-hot-toast";
-import { useCart } from "../context/cart";
 import { useNavigate } from 'react-router-dom';
 
 const ReviewForm = () => {
@@ -14,8 +10,7 @@ const ReviewForm = () => {
   const [reviews, setReviews] = useState('');
   const [ratings, setRatings] = useState(0);
   const [hover, setHover] = useState(0);
-  // context
-  const [cart, setCart] = useCart();
+
   // state
   const [feedback, setFeedback] = useState({});
 

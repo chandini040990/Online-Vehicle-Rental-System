@@ -6,8 +6,6 @@ import UserMenu from "../../components/nav/UserMenu";
 import axios from "axios";
 import moment from "moment";
 import ProductCardHorizontal from "../../components/cards/ProductCardHorizontal";
-import ProductCard from "../../components/cards/ProductCard";
-import { useCart } from "../../context/cart";
 import jsPDF from 'jspdf';
 
 
@@ -16,10 +14,9 @@ export default function UserBookings() {
   const [auth, setAuth] = useAuth();
   // state
   const [bookings, setBookings] = useState([]);
-  const [bookingData, setBookingData] = useState([]);
-  const [cart, setCart] = useCart();
+
   // state
-  const [product, setProduct] = useState({});
+  
   const [invoices, setInvoices] = useState([]);
   const navigate = useNavigate();
 
