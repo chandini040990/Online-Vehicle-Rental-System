@@ -32,7 +32,7 @@ export default function AdminBookings() {
       const { data } = await axios.get("/all-bookings");
       // console.log("allbookings",data);
       setBookings(data);
-    
+
     } catch (err) {
       console.log(err);
     }
@@ -66,43 +66,46 @@ export default function AdminBookings() {
               return (
                 <div
                   key={o._id}
-                  className="border shadow bg-light text-black rounded-4 mb-5"
+                  className="border col-md-4 shadow bg-light text-black rounded-4 mb-5"
                 >
-                  <table className="table">
-                    <thead>
-                      <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">Status</th>
-                        <th scope="col">Buyer</th>
-                        <th scope="col">Booked</th>
-                        <th scope="col">Payment</th>
-                        <th scope="col">Quantity</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>{i + 1}</td>
-                        <td>
-                          <Select
-                            bordered={false}
-                            onChange={(value) => handleChange(o._id, value)}
-                            defaultValue={o?.status}
-                          >
-                            {status.map((s, i) => (
-                              <Option key={i} value={s}>
-                                {s}
-                              </Option>
-                            ))}
-                          </Select>
-                        </td>
-                        <td>{o?.buyer?.name}</td>
-                        <td>{moment(o?.createdAt).fromNow()}</td>
-                        <td>{o?.payment?.success ? "Success" : "Failed"}</td>
-                        <td>{o?.products?.length} products</td>
-                      </tr>
-                    </tbody>
-                  </table>
-
+                  <div class="table-responsive">
+                    <table class="table table-striped 
+                    table-bordered table-hover">
+                      <thead>
+                        <tr>
+                          <th scope="col">#</th>
+                          <th scope="col">Status</th>
+                          <th scope="col">Buyer</th>
+                          <th scope="col">Booked</th>
+                          <th scope="col">Payment</th>
+                          <th scope="col">Quantity</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>{i + 1}</td>
+                          <td>
+                            <Select
+                              bordered={false}
+                              onChange={(value) => handleChange(o._id, value)}
+                              defaultValue={o?.status}
+                            >
+                              {status.map((s, i) => (
+                                <Option key={i} value={s}>
+                                  {s}
+                                </Option>
+                              ))}
+                            </Select>
+                          </td>
+                          <td>{o?.buyer?.name}</td>
+                          <td>{moment(o?.createdAt).fromNow()}</td>
+                          <td>{o?.payment?.success ? "Success" : "Failed"}</td>
+                          <td>{o?.products?.length} products</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  
                   <div className="container">
                     <div className="row m-2">
                       {o?.products?.map((p, i) => (

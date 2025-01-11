@@ -16,7 +16,7 @@ export default function UserBookings() {
   const [bookings, setBookings] = useState([]);
 
   // state
-  
+
   const [invoices, setInvoices] = useState([]);
   const navigate = useNavigate();
 
@@ -37,10 +37,11 @@ export default function UserBookings() {
     try {
       const { data } = await axios.get(`/invoice/${bookingId}`);
       setInvoices(data);
-
-      if (data !== '') {
+      // console.log("invoices", invoices)
+      if (invoices !== '') {
         handleDownloadPDF(invoices);
       }
+
     } catch (err) {
       console.log(err);
     }
@@ -89,9 +90,9 @@ export default function UserBookings() {
     ----------------------------------------------------------------------------------------------`, 20, yPos1);
 
           });
-      
+
         }
-      
+
 
       });
     }
@@ -118,41 +119,44 @@ export default function UserBookings() {
                   key={o._id}
                   className="border shadow bg-light text-black rounded-4 mb-5"
                 >
-                  <table className="table">
-                    <thead>
-                      <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">Status</th>
-                        <th scope="col">Buyer</th>
-                        <th scope="col">Booked</th>
-                        <th scope="col">Payment</th>
-                        <th scope="col">Quantity</th>
-                        <th scope="col">Invoice</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>{i + 1}</td>
-                        <td>{o?.status}</td>
-                        <td>{o?.buyer?.name}</td>
-                        <td>{moment(o?.createdAt).fromNow()}</td>
-                        <td>{o?.payment?.success ? "Success" : "Failed"}</td>
-                        <td>{o?.products?.length} products</td>
-                        <td><button
-                          className="btn btn-outline-primary col card-button"
-                          style={{
-                            borderBottomRightRadius: "5px",
-                            borderBottomLeftRadius: "5px",
-                          }}
-                          onClick={() => {
-                            { getInvoice(o._id) };
-                          }}
-                        >
-                          Invoice
-                        </button></td>
-                      </tr>
-                    </tbody>
-                  </table>
+                  <div class="table-responsive">
+                    <table class="table table-striped 
+                    table-bordered table-hover">
+                      <thead>
+                        <tr>
+                          <th scope="col">#</th>
+                          <th scope="col">Status</th>
+                          <th scope="col">Buyer</th>
+                          <th scope="col">Booked</th>
+                          <th scope="col">Payment</th>
+                          <th scope="col">Quantity</th>
+                          <th scope="col">Invoice</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>{i + 1}</td>
+                          <td>{o?.status}</td>
+                          <td>{o?.buyer?.name}</td>
+                          <td>{moment(o?.createdAt).fromNow()}</td>
+                          <td>{o?.payment?.success ? "Success" : "Failed"}</td>
+                          <td>{o?.products?.length} products</td>
+                          <td><button
+                            className="btn btn-outline-primary col card-button"
+                            style={{
+                              borderBottomRightRadius: "5px",
+                              borderBottomLeftRadius: "5px",
+                            }}
+                            onClick={() => {
+                              { getInvoice(o._id) };
+                            }}
+                          >
+                            Invoice
+                          </button></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
 
                   <div className="container">
                     <div className="row m-2">

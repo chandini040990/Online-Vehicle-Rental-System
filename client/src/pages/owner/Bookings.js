@@ -47,7 +47,9 @@ export default function OwnerBookings() {
                   key={o._id}
                   className="border shadow bg-light text-black rounded-4 mb-5"
                 >
-                  <table className="table">
+                  <div class="table-responsive">
+                    <table class="table table-striped 
+                    table-bordered table-hover">
                     <thead>
                       <tr>
                         <th scope="col">#</th>
@@ -69,6 +71,7 @@ export default function OwnerBookings() {
                       </tr>
                     </tbody>
                   </table>
+                  </div>
 
                   <div className="container">
                     <div className="row m-2">

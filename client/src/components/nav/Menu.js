@@ -22,16 +22,17 @@ export default function Menu() {
 
   return (
     <>
-      <ul className="nav d-flex justify-content-between shadow-sm mb-2 sticky-top bg-blue">
+
+      <ul className="nav d-flex justify-content-evenly shadow-sm mb-1 sticky-top bg-blue">
         <li className="nav-item">
           <NavLink className="nav-link" aria-current="page" to="/">
-            HOME
+            Home
           </NavLink>
         </li>
 
         <li className="nav-item">
           <NavLink className="nav-link" aria-current="page" to="/cars">
-            CARS
+            Cars
           </NavLink>
         </li>
 
@@ -41,7 +42,7 @@ export default function Menu() {
               className="nav-link pointer dropdown-toggle"
               data-bs-toggle="dropdown"
             >
-              CATEGORIES
+              Categories
             </a>
 
             <ul
@@ -72,7 +73,7 @@ export default function Menu() {
             showZero={true}
           >
             <NavLink className="nav-link" aria-current="page" to="/cart">
-              CART
+              Cart
             </NavLink>
           </Badge>
         </li>
@@ -83,12 +84,12 @@ export default function Menu() {
           <>
             <li className="nav-item">
               <NavLink className="nav-link" to="/login">
-                LOGIN
+                Login
               </NavLink>
             </li>
             <li className="nav-item">
               <NavLink className="nav-link" to="/register">
-                REGISTER
+                Register
               </NavLink>
             </li>
           </>
@@ -109,7 +110,7 @@ export default function Menu() {
                     to={`/dashboard/${
                       // auth?.user?.role === 1 ? "admin" : "user" 
                       auth?.user?.role
-                    }`}
+                      }`}
                   >
                     Dashboard
                   </NavLink>
@@ -125,6 +126,7 @@ export default function Menu() {
           </div>
         )}
       </ul>
+
     </>
   );
 }

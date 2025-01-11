@@ -320,9 +320,10 @@ export const updateProduct = async (req, res) => {
 
 export const getInvoice = async (req, res) => {
   try {
-
+    // console.log("req.params.bookingId", req.params.bookingId)
     const { bookingId } = req.params.bookingId;
     const billing = await Booking.find({ _id: req.params.bookingId }).populate("buyer", "email name");
+    // console.log("billing", billing)
     res.json(billing);
 
   } catch (err) {
@@ -363,7 +364,7 @@ export const processPayment = async (req, res) => {
           submitForSettlement: true,
         },
       },
-  
+
       function (error, result) {
         if (result) {
           // console.log("result",result)
