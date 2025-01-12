@@ -33,7 +33,7 @@ export default function Menu() {
         <div className="nav-container">
           <NavLink exact to="/" className="nav-logo">
             <span>WHEELS 4 RENT</span>
-            <i className="fas fa-code"></i>
+            <i class="fa-solid fa-car"></i>
           </NavLink>
 
           <ul className={click ? "nav-menu active" : "nav-menu"}>

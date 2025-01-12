@@ -144,7 +144,7 @@ export const getBookings = async (req, res) => {
 
 export const ownerBookings = async (req, res) => {
   try {
-    console.log("owner", req.user._id)
+    // console.log("owner", req.user._id)
     const booking = await Booking.find({ "productData.owner._id": req.user._id })
       .populate("products", "-photo")
       .populate("buyer", "name");
