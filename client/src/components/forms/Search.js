@@ -23,7 +23,7 @@ export default function Search() {
     <form className="d-flex" onSubmit={handleSubmit}>
       <input
         type="search"
-        style={{ borderRadius: "0px" }}
+        style={{ borderRadius: "0px"}}
         className="form-control"
         placeholder="Search here"
         onChange={(e) => setValues({ ...values, keyword: e.target.value })}
@@ -32,9 +32,9 @@ export default function Search() {
       <button
         className="btn btn-outline-primary"
         type="submit"
-        style={{ backgroundColor:"orange", borderRadius: "0px" }}
+        style={{ backgroundColor:"orange", borderRadius: "0px"}}
       >
-        Search
+        <i class="fas fa-search" aria-hidden="true"></i>
       </button>
     </form>
   );

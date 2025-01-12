@@ -109,7 +109,7 @@ export default function Cars() {
           </div>
 
           <div className="col-md-9">
-            <h2 className="p-3 mt-2 mb-2 h4 bg-light text-center">
+            <h2 className="p-3 mt-2 mb-2 h4 bg-blue text-center">
               {products?.length} Products
             </h2>
 

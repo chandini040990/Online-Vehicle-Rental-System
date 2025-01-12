@@ -27,8 +27,8 @@ export default function Testimonials() {
         <>
 
             <div className="container-fluid border-top border-bottom mx-auto text-center mb-4">
-                <h2 className="text-4xl font-bold text-blue-900 mb-8">Testimonials</h2>
-                <p className="text-lg text-gray-700 font-normal mb-8">What our customers say about us</p>
+                <h2 className="text-6xl font-bold text-blue-900 mb-8">Testimonials</h2>
+                <p className="text-lg text-gray-700 mb-8">What our customers say about us</p>
                 <div className="container overflow-hidden">
 
                     {testimonials.length === 0 ? (
@@ -38,8 +38,8 @@ export default function Testimonials() {
                             {testimonials?.map((c) => (
                                 <div className="col-md-6 my-4" key={c._id}>
 
-                                    <div className="bg-white p-10 text-center rounded-lg shadow-lg w-100 h-auto">
-                                        <img style={{ height: '20%', width: '15%', marginLeft:"42%",marginTop: '5px' }} src="images/icon.png" alt="icon" />
+                                    <div className="bg-gray-200 p-10 text-center rounded-lg shadow-sm w-100 h-auto">
+                                        <img style={{ height: '20%', width: '15%', marginLeft: "42%", marginTop: '5px' }} src="images/icon.png" alt="icon" />
                                         <h2 className="fw-bold">{c.name}</h2>
                                         <p className="card-text">{c.reviews}</p>
                                         {/* <p className="card-text">{c.ratings}</p> */}

@@ -38,9 +38,9 @@ export default function UserBookings() {
       const { data } = await axios.get(`/invoice/${bookingId}`);
       setInvoices(data);
       // console.log("invoices", invoices)
-      if (invoices !== '') {
-        handleDownloadPDF(invoices);
-      }
+      // if (invoices !== '') {
+      handleDownloadPDF(invoices);
+      // }
 
     } catch (err) {
       console.log(err);

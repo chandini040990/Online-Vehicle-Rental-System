@@ -66,7 +66,7 @@ export default function AdminBookings() {
               return (
                 <div
                   key={o._id}
-                  className="border col-md-4 shadow bg-light text-black rounded-4 mb-5"
+                  className="border shadow bg-light text-black rounded-4 mb-5"
                 >
                   <div class="table-responsive">
                     <table class="table table-striped 

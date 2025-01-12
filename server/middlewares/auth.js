@@ -29,6 +29,7 @@ export const isAdmin = async (req, res, next) => {
 
 export const isOwner = async (req, res, next) => {
   try {
+    // console.log("req.user._id)",req.user._id)
     const user = await User.findById(req.user._id);
     if (user.role !== "owner") {
       return res.status(401).send("Unauthorized");

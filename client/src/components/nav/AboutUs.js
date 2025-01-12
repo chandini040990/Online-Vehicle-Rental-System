@@ -13,7 +13,7 @@ function AboutUs() {
                     <div className="about-image">
                         <img src="images/car.png" alt="aboutus" />
                     </div>
-                    <div className="about-content">
+                    <div className="about-content text-gray-700 ">
                         <h2> Why choose us?</h2>
                         <p>Book directly through our website.Vehicle make and model guaranteed, not “similar” to those selected - 
                             Same day rental - Hotel and airport delivery/collection - Flexible terms and payment options for long term rental
